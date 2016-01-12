@@ -30,6 +30,11 @@
 		A8313D171C39DF700093A438 /* PlainNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8313D121C39DF700093A438 /* PlainNote.swift */; };
 		A8313D181C39DF700093A438 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8313D131C39DF700093A438 /* Time.swift */; };
 		A8313D1A1C39E2990093A438 /* csscript.csd in Resources */ = {isa = PBXBuildFile; fileRef = A8313D191C39E2990093A438 /* csscript.csd */; };
+		A8313D1C1C3A41470093A438 /* test.csd in Resources */ = {isa = PBXBuildFile; fileRef = A8313D1B1C3A41470093A438 /* test.csd */; };
+		A8313D1E1C41D2B70093A438 /* test2.csd in Resources */ = {isa = PBXBuildFile; fileRef = A8313D1D1C41D2B70093A438 /* test2.csd */; };
+		A8313D201C4207E50093A438 /* test3.csd in Resources */ = {isa = PBXBuildFile; fileRef = A8313D1F1C4207E50093A438 /* test3.csd */; };
+		A8313D221C433F770093A438 /* flute.csd in Resources */ = {isa = PBXBuildFile; fileRef = A8313D211C433F770093A438 /* flute.csd */; };
+		A8313D261C4349BB0093A438 /* flutebak.csd in Resources */ = {isa = PBXBuildFile; fileRef = A8313D251C4349BB0093A438 /* flutebak.csd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +126,11 @@
 		A8313D121C39DF700093A438 /* PlainNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainNote.swift; sourceTree = "<group>"; };
 		A8313D131C39DF700093A438 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		A8313D191C39E2990093A438 /* csscript.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = csscript.csd; sourceTree = "<group>"; };
+		A8313D1B1C3A41470093A438 /* test.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.csd; sourceTree = "<group>"; };
+		A8313D1D1C41D2B70093A438 /* test2.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test2.csd; sourceTree = "<group>"; };
+		A8313D1F1C4207E50093A438 /* test3.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test3.csd; sourceTree = "<group>"; };
+		A8313D211C433F770093A438 /* flute.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flute.csd; sourceTree = "<group>"; };
+		A8313D251C4349BB0093A438 /* flutebak.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = flutebak.csd; path = ../flutebak.csd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +194,11 @@
 				A8313C991C39D7A50093A438 /* Assets.xcassets */,
 				A8313C9B1C39D7A50093A438 /* LaunchScreen.storyboard */,
 				A8313C9E1C39D7A50093A438 /* Info.plist */,
+				A8313D1B1C3A41470093A438 /* test.csd */,
+				A8313D1D1C41D2B70093A438 /* test2.csd */,
+				A8313D1F1C4207E50093A438 /* test3.csd */,
+				A8313D211C433F770093A438 /* flute.csd */,
+				A8313D251C4349BB0093A438 /* flutebak.csd */,
 			);
 			path = CsoundBasic2;
 			sourceTree = "<group>";
@@ -357,6 +372,7 @@
 				TargetAttributes = {
 					A8313C8E1C39D7A40093A438 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 49FM8DE5C4;
 					};
 					A8313CA21C39D7A50093A438 = {
 						CreatedOnToolsVersion = 7.2;
@@ -396,9 +412,14 @@
 				A8313C9D1C39D7A50093A438 /* LaunchScreen.storyboard in Resources */,
 				A8313CE91C39D8B00093A438 /* orcandsco.csd in Resources */,
 				A8313C9A1C39D7A50093A438 /* Assets.xcassets in Resources */,
+				A8313D1E1C41D2B70093A438 /* test2.csd in Resources */,
 				A8313D1A1C39E2990093A438 /* csscript.csd in Resources */,
 				A8313C981C39D7A50093A438 /* Main.storyboard in Resources */,
 				A8313CEF1C39D8B00093A438 /* run-script.sh in Resources */,
+				A8313D1C1C3A41470093A438 /* test.csd in Resources */,
+				A8313D201C4207E50093A438 /* test3.csd in Resources */,
+				A8313D261C4349BB0093A438 /* flutebak.csd in Resources */,
+				A8313D221C433F770093A438 /* flute.csd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +610,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CsoundBasic2/CsoundIos/lib",
@@ -597,6 +620,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asdeva.CsoundBasic2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = CsoundIos/ObjcBridge.h;
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "CsoundIos/**";
 			};
@@ -606,6 +630,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CsoundBasic2/CsoundIos/lib",
@@ -614,6 +640,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asdeva.CsoundBasic2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = CsoundIos/ObjcBridge.h;
 				USER_HEADER_SEARCH_PATHS = "CsoundIos/**";
 			};
