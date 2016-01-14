@@ -19,14 +19,16 @@ itie tival
 i_instanceNum = p4
 S_freq sprintf "freq.%d", i_instanceNum
 S_vol sprintf "vol.%d", i_instanceNum
+S_vib sprintf "vib.%d", i_instanceNum
 iHz chnget S_freq
 kHz chnget S_freq
 kVol chnget S_vol
+kVib chnget S_vib
 
 ;iHz = 1 * 440
 ;kHz = 2 * 440
 ;kVol = 0.5
-kVib = .1
+;kVib = .1
 
 aflute init 0
 

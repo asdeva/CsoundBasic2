@@ -30,7 +30,7 @@
                                 </connections>
                             </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BA3-6v-yoP">
-                                <rect key="frame" x="129" y="166" width="51" height="31"/>
+                                <rect key="frame" x="135" y="166" width="51" height="31"/>
                                 <connections>
                                     <action selector="B:" destination="BYZ-38-t0r" eventType="valueChanged" id="bVZ-5T-A7r"/>
                                 </connections>
@@ -41,24 +41,31 @@
                                     <action selector="BSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="RbH-gv-9QJ"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cIG-ME-Zy3">
-                                <rect key="frame" x="222" y="223" width="118" height="31"/>
-                                <connections>
-                                    <action selector="CSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="fHT-ug-FUO"/>
-                                </connections>
-                            </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5kV-vS-aVc">
                                 <rect key="frame" x="135" y="223" width="51" height="31"/>
                                 <connections>
                                     <action selector="C:" destination="BYZ-38-t0r" eventType="valueChanged" id="Pqg-2i-hPC"/>
                                 </connections>
                             </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cIG-ME-Zy3">
+                                <rect key="frame" x="222" y="223" width="118" height="31"/>
+                                <connections>
+                                    <action selector="CSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="fHT-ug-FUO"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dd1-pl-2Tc">
+                                <rect key="frame" x="133" y="309" width="207" height="31"/>
+                                <connections>
+                                    <action selector="vibra:" destination="BYZ-38-t0r" eventType="valueChanged" id="m3E-m1-seE"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="501" y="478"/>
         </scene>
     </scenes>
 </document>

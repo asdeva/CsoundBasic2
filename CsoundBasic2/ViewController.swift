@@ -9,17 +9,6 @@
 import UIKit
 
 
-extension PlainNote {
-    var hertz: (Float, Int) {
-        get {
-            return (hertz, 0)
-        }
-        set {
-            hertz = newValue.0 * Float(pow(2, Float(newValue.1)/Float(12.0)))
-            print(hertz)
-        }
-    }
-}
 
 class ViewController: UIViewController
 {
@@ -36,7 +25,7 @@ class ViewController: UIViewController
     
     var hertzA : (Float, Int) = (220.0, 0)
     
-    var hertzB : (Float, Int) = (220.0, 4)
+    var hertzB : (Float, Int) = (220.0, -12)
     
     var hertzC : (Float, Int) = (220.0, 7)
     
@@ -45,10 +34,6 @@ class ViewController: UIViewController
         csound = CsoundObj()
         
         instrument = BasicInstrument(csd: "flute", csound: csound)
-        //instrument = BasicInstrument(csd: "test3", csound: csound)
-        //instrument = BasicInstrument(csd: "test2", csound: csound)
-        //instrument = BasicInstrument(csd: "test", csound: csound)
-        //instrument = BasicInstrument(csd: "csscript", csound: csound)
         view.multipleTouchEnabled = true
     }
     
@@ -58,6 +43,7 @@ class ViewController: UIViewController
             if var note = instrument.newNote() {
                 note.volume = 0.5
                 note.hertz = hertzA
+                note.vibrato = 0
                 noteA = note
             }
         }
@@ -79,6 +65,7 @@ class ViewController: UIViewController
             if var note = instrument.newNote() {
                 note.volume = 0.5
                 note.hertz = hertzB
+                note.vibrato = 0
                 noteB = note
             }
         }
@@ -100,6 +87,7 @@ class ViewController: UIViewController
             if var note = instrument.newNote() {
                 note.volume = 0.5
                 note.hertz = hertzC
+                note.vibrato = 0
                 noteC = note
             }
         }
@@ -115,6 +103,21 @@ class ViewController: UIViewController
         }
     }
     
+    
+    
+    @IBAction func vibra(sender: UISlider) {
+        let vibrato = sender.value / 20.0
+        print("vibrato:", vibrato)
+        if noteA != nil {
+            noteA.vibrato = vibrato
+        }
+        if noteB != nil {
+            noteB.vibrato = vibrato
+        }
+        if noteC != nil {
+            noteC.vibrato = vibrato
+        }
+    }
     
 }
 
