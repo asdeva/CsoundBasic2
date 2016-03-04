@@ -12,112 +12,87 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    
+        
     var csound: CsoundObj!
     
     var instrument: BasicInstrument!
     
-    var noteA: PlainNote!
-
-    var noteB: PlainNote!
+    let baseNote:  Float = 110.0
     
-    var noteC: PlainNote!
+    var legato = true
     
-    var hertzA : (Float, Int) = (220.0, 0)
+    var lastUp: UIButton? = nil
     
-    var hertzB : (Float, Int) = (220.0, -12)
+    var extendedNotes : [BasicInstrument.BasicNote] = []
     
-    var hertzC : (Float, Int) = (220.0, 7)
+    var buttonToNote : [UIButton: BasicInstrument.BasicNote] = [:]
+    
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         csound = CsoundObj()
         
         instrument = BasicInstrument(csd: "flute", csound: csound)
+        assignNoteToButton()
         view.multipleTouchEnabled = true
     }
     
+    func assignNoteToButton() {
+        var row: Int = 0
+        var col: Int = 0
+        for view in Keyboard.subviews {
+            col = 0
+            for k in view.subviews {
+                if let k = k as? UIButton {
+                    let offset = col + Int(row%2 != 0) * 7 + (row/2)*12
+                    if let n = instrument.newNote() as?
+                        BasicInstrument.BasicNote {
+                        buttonToNote[k] = n
+                        buttonToNote[k]?.hertz = (baseNote, offset)
+                    }
+                }
+                ++col
+            }
+            ++row
+        }
+    }
     
-    @IBAction func A(sender: UISwitch) {
-        if noteA == nil {
-            if var note = instrument.newNote() {
-                note.volume = 0.5
-                note.hertz = hertzA
-                note.vibrato = 0
-                noteA = note
+    @IBAction func touchUp(sender: UIButton) {
+        if let nu = buttonToNote[sender] {
+            if legato && nu.sounding {
+                extendedNotes.append(nu)
+            } else {
+                nu.sounding = false
             }
         }
-        if noteA != nil {
-            noteA.sounding = sender.on
-        }
-        print(noteA.hertz.0)
     }
     
     
-    @IBAction func ASlider(sender: UISlider) {
-        if noteA != nil {
-            noteA.volume = sender.value
-        }
-    }
-    
-    @IBAction func B(sender: UISwitch) {
-        if noteB == nil {
-            if var note = instrument.newNote() {
-                note.volume = 0.5
-                note.hertz = hertzB
-                note.vibrato = 0
-                noteB = note
+    @IBAction func noteKeyPressed(sender: UIButton) {
+        if let nd = buttonToNote[sender] {
+            if let ne = extendedNotes.first where legato {
+                extendedNotes.removeFirst()
+                if ne !== nd {
+                    NSTimer.schedule(delay: 0.15) {_ in
+                        ne.sounding = false
+                    }
+                    nd.volume = 0.5
+                    nd.sounding = true
+                } else {
+                    ne.sounding = false
+                }
+                
+            } else {
+                nd.volume = 0.5
+                nd.sounding = true
             }
         }
-        if noteB != nil {
-            noteB.sounding = sender.on
-        }
-        print(noteB.hertz.0)
-        
-    }
-    
-    @IBAction func BSlider(sender: UISlider) {
-        if noteB != nil {
-            noteB.volume = sender.value
-        }
-    }
-    
-    @IBAction func C(sender: UISwitch) {
-        if noteC == nil {
-            if var note = instrument.newNote() {
-                note.volume = 0.5
-                note.hertz = hertzC
-                note.vibrato = 0
-                noteC = note
-            }
-        }
-        if noteC != nil {
-            noteC.sounding = sender.on
-        }
-        print(noteC.hertz.0)
-    }
-    
-    @IBAction func CSlider(sender: UISlider) {
-        if noteC != nil {
-            noteC.volume = sender.value
-        }
     }
     
     
     
-    @IBAction func vibra(sender: UISlider) {
-        let vibrato = sender.value / 20.0
-        print("vibrato:", vibrato)
-        if noteA != nil {
-            noteA.vibrato = vibrato
-        }
-        if noteB != nil {
-            noteB.vibrato = vibrato
-        }
-        if noteC != nil {
-            noteC.vibrato = vibrato
-        }
-    }
+    @IBOutlet var KbdFirstRow: UIStackView!
     
+    @IBOutlet var Keyboard: UIStackView!
 }
 
