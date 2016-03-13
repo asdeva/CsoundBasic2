@@ -45,8 +45,8 @@ kvibr chnget S_vib
 
 
 kvibd     =       abs(kvibr*kfreq/100.0)                    ; vibrato depth relative to fund. freq
-iatt      =       0.01                                      ; attack time
-idec      =       0.01                                      ; decay time
+iatt      =       0.09                                      ; attack time
+idec      =       0.09                                       ; decay time
 ibrite    tablei  9, 2                                      ; lowpass filter cutoff frequency
 itablno   table   3, 3                                      ; select first wavetable number for this
                                                             ; instrument (in table 3)
@@ -70,8 +70,7 @@ kvib      = oscil(kvibd, ivibr1, 1)
 kfreq     = kfreq + kvib
 
 ;___________________________________________________________; amplitude envelopes
-;amp1      = linsegr(0,.001, 0,.5*iatt, .5,.5*iatt, .9,.5*iatt, 1, 0.5*idec,0)
-amp1      = linsegr(0, .05, 1, 0.05, 0)
+amp1      = linsegr(0, iatt, 1, idec, 0)
 
 amp2      =       amp1 * amp1	
 amp3      =       amp2 * amp1
@@ -109,8 +108,9 @@ ac4       comb    garev, irevtime, .0437
 acomb     =       ac1 + ac2 + ac3 + ac4
 ap1       alpass  acomb, .09683, .005
 arev      alpass  ap1, .03292, .0017
-aout      =       (iacoustic * garev) + (ireverb * arev)    ; mix the signal
-          out     aout * igain                              ; attenuate and output the signal
+aout      =       (iacoustic * garev) + (ireverb * arev) * igain   ; mix the signal
+
+          outs    aout, aout                                ; attenuate and output the signal
 garev     =       0                                         ; set garev to 0 to prevent feedback
           endin
 
