@@ -439,6 +439,10 @@
                                                 <color key="backgroundColor" red="0.4888004708" green="0.71931759549999996" blue="0.83210754080000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                 <state key="normal" title="G"/>
+                                                <connections>
+                                                    <action selector="noteKeyPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="2yO-Xf-4Zz"/>
+                                                    <action selector="touchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wjo-vv-Ycl"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
