@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8026D8C1C9501EE00BC2337 /* oboe.csd in Resources */ = {isa = PBXBuildFile; fileRef = A8026D8B1C9501EE00BC2337 /* oboe.csd */; };
+		A8026D8E1C95029A00BC2337 /* flute.csd in Resources */ = {isa = PBXBuildFile; fileRef = A8026D8D1C95029A00BC2337 /* flute.csd */; };
 		A8313C931C39D7A40093A438 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8313C921C39D7A40093A438 /* AppDelegate.swift */; };
 		A8313C951C39D7A40093A438 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8313C941C39D7A40093A438 /* ViewController.swift */; };
 		A8313C981C39D7A50093A438 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8313C961C39D7A50093A438 /* Main.storyboard */; };
@@ -30,7 +32,8 @@
 		A8313D171C39DF700093A438 /* PlainNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8313D121C39DF700093A438 /* PlainNote.swift */; };
 		A8313D181C39DF700093A438 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8313D131C39DF700093A438 /* Time.swift */; };
 		A8313D1A1C39E2990093A438 /* csscript.csd in Resources */ = {isa = PBXBuildFile; fileRef = A8313D191C39E2990093A438 /* csscript.csd */; };
-		A8313D221C433F770093A438 /* flute.csd in Resources */ = {isa = PBXBuildFile; fileRef = A8313D211C433F770093A438 /* flute.csd */; };
+		A89EFAD61C9527A1000B9B15 /* MovingAverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89EFAD51C9527A1000B9B15 /* MovingAverage.swift */; };
+		A89EFAD81C953271000B9B15 /* Interpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89EFAD71C953271000B9B15 /* Interpolator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A8026D8B1C9501EE00BC2337 /* oboe.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = oboe.csd; sourceTree = "<group>"; };
+		A8026D8D1C95029A00BC2337 /* flute.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flute.csd; sourceTree = "<group>"; };
 		A8313C8F1C39D7A40093A438 /* CsoundBasic2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CsoundBasic2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8313C921C39D7A40093A438 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8313C941C39D7A40093A438 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,7 +127,8 @@
 		A8313D121C39DF700093A438 /* PlainNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainNote.swift; sourceTree = "<group>"; };
 		A8313D131C39DF700093A438 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		A8313D191C39E2990093A438 /* csscript.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = csscript.csd; sourceTree = "<group>"; };
-		A8313D211C433F770093A438 /* flute.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flute.csd; sourceTree = "<group>"; };
+		A89EFAD51C9527A1000B9B15 /* MovingAverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingAverage.swift; sourceTree = "<group>"; };
+		A89EFAD71C953271000B9B15 /* Interpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8026D8A1C9501EE00BC2337 /* Instruments */ = {
+			isa = PBXGroup;
+			children = (
+				A8026D8D1C95029A00BC2337 /* flute.csd */,
+				A8026D8B1C9501EE00BC2337 /* oboe.csd */,
+			);
+			path = Instruments;
+			sourceTree = "<group>";
+		};
 		A8313C861C39D7A40093A438 = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +192,7 @@
 		A8313C911C39D7A40093A438 /* CsoundBasic2 */ = {
 			isa = PBXGroup;
 			children = (
-				A8313D191C39E2990093A438 /* csscript.csd */,
+				A8026D8A1C9501EE00BC2337 /* Instruments */,
 				A8313D0D1C39DF700093A438 /* foundation */,
 				A8313CC01C39D8B00093A438 /* CsoundIos */,
 				A8313C921C39D7A40093A438 /* AppDelegate.swift */,
@@ -186,7 +201,7 @@
 				A8313C991C39D7A50093A438 /* Assets.xcassets */,
 				A8313C9B1C39D7A50093A438 /* LaunchScreen.storyboard */,
 				A8313C9E1C39D7A50093A438 /* Info.plist */,
-				A8313D211C433F770093A438 /* flute.csd */,
+				A8313D191C39E2990093A438 /* csscript.csd */,
 			);
 			path = CsoundBasic2;
 			sourceTree = "<group>";
@@ -285,6 +300,8 @@
 				A8313D111C39DF700093A438 /* Instrument.swift */,
 				A8313D121C39DF700093A438 /* PlainNote.swift */,
 				A8313D131C39DF700093A438 /* Time.swift */,
+				A89EFAD51C9527A1000B9B15 /* MovingAverage.swift */,
+				A89EFAD71C953271000B9B15 /* Interpolator.swift */,
 			);
 			name = foundation;
 			path = ../../../foundation;
@@ -398,12 +415,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8313C9D1C39D7A50093A438 /* LaunchScreen.storyboard in Resources */,
+				A8026D8C1C9501EE00BC2337 /* oboe.csd in Resources */,
 				A8313CE91C39D8B00093A438 /* orcandsco.csd in Resources */,
+				A8026D8E1C95029A00BC2337 /* flute.csd in Resources */,
 				A8313C9A1C39D7A50093A438 /* Assets.xcassets in Resources */,
 				A8313D1A1C39E2990093A438 /* csscript.csd in Resources */,
 				A8313C981C39D7A50093A438 /* Main.storyboard in Resources */,
 				A8313CEF1C39D8B00093A438 /* run-script.sh in Resources */,
-				A8313D221C433F770093A438 /* flute.csd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +468,8 @@
 				A8313C951C39D7A40093A438 /* ViewController.swift in Sources */,
 				A8313D141C39DF700093A438 /* BasicInstrument.swift in Sources */,
 				A8313D171C39DF700093A438 /* PlainNote.swift in Sources */,
+				A89EFAD61C9527A1000B9B15 /* MovingAverage.swift in Sources */,
+				A89EFAD81C953271000B9B15 /* Interpolator.swift in Sources */,
 				A8313D161C39DF700093A438 /* Instrument.swift in Sources */,
 				A8313D181C39DF700093A438 /* Time.swift in Sources */,
 				A8313C931C39D7A40093A438 /* AppDelegate.swift in Sources */,

@@ -39,7 +39,7 @@ ibreath  =  .02
 ifeedbk1  =  .4
 ifeedbk2  =  .4
 
-kenv1     = linsegr(0, .06, 1.1, .2, ipress, .25, 0)
+kenv1     = linsegr(0, .06,  1.1, .2,  ipress, .25, 0)
 kenv2     = linsegr(0, .01, 1, .15, 0)
 kenvibr   = linsegr(0, .5,  1, .15, 0)
 

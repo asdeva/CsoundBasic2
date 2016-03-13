@@ -21,6 +21,10 @@ class ViewController: UIViewController
     
     var legato = true
     
+    var volume: Float = 0.3
+    
+    var vibrato: Float = 0.5
+    
     var lastUp: UIButton? = nil
     
     typealias BasicNote = BasicInstrument.BasicNote
@@ -34,6 +38,9 @@ class ViewController: UIViewController
     let melody = [5,5,8,5,5,8,5,8,13,12,10,10,8,3,5,6,3,3,5,6,3,6,12,10,8,12,13,
     1,1,13,10,6,8,5,1,6,8,10,8,1,1,13,10,6,8,5,1,6,8,6,5,3,1]
     
+    //let melody = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
+  
+    
     var i = 0
     
     var offset = 12
@@ -46,8 +53,7 @@ class ViewController: UIViewController
         csound = CsoundObj()
         
         //instrument = BasicInstrument(csd: "flute", csound: csound)
-        instrument = BasicInstrument(csd: "oboe1", csound: csound)
-        //instrument = BasicInstrument(csd: "oboe2", csound: csound)
+        instrument = BasicInstrument(csd: "oboe", csound: csound)
         //instrument = BasicInstrument(csd: "csscript", csound: csound)
         assignNoteToButton()
         view.multipleTouchEnabled = true
@@ -92,11 +98,12 @@ class ViewController: UIViewController
             if let ne = extendedNotes.first where legato {
                 extendedNotes.removeFirst()
                 if ne !== nd {
-                    NSTimer.schedule(delay: 0.01) {_ in
+                    NSTimer.schedule(delay: 0.03) {_ in
                         ne.sounding = false
                         --self.numNotesOn
                     }
-                    nd.volume = 0.5
+                    nd.volume = volume
+                    nd.vibrato = vibrato
                     if playBack {
                         nd.hertz = (baseNote, offset + melody[i])
                         i = (i+1) % melody.count
@@ -108,7 +115,8 @@ class ViewController: UIViewController
                     --numNotesOn
                 }
             } else {
-                nd.volume = 0.3
+                nd.volume = volume
+                nd.vibrato = vibrato
                 if playBack {
                     nd.hertz = (baseNote, offset + melody[i])
                     i = (i+1) % melody.count
@@ -120,6 +128,20 @@ class ViewController: UIViewController
     }
     
     
+    
+    @IBAction func volumeCtl(sender: UISlider) {
+        volume = sender.value/3
+        for (_, note) in buttonToNote {
+            note.volume = volume
+        }
+    }
+    
+    @IBAction func vibratoCtl(sender: UISlider) {
+        vibrato = sender.value
+        for (_, note) in buttonToNote {
+            note.vibrato = vibrato
+        }
+    }
     
     @IBOutlet var KbdFirstRow: UIStackView!
     

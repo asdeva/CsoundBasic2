@@ -71,10 +71,9 @@ kfreq     = kfreq + kvib
 
 ;___________________________________________________________; amplitude envelopes
 amp1      = linsegr(0, iatt, 1, idec, 0)
-
-amp2      =       amp1 * amp1	
-amp3      =       amp2 * amp1
-amp4      =       amp3 * amp1
+amp2      = amp1 * amp1
+amp3      = amp2 * amp1
+amp4      = amp3 * amp1
 ;___________________________________________________________; wavetable lookup
 awt1      oscili  amp1, kfreq, iwt1, iphase		
 awt2      oscili  amp2, kfreq, iwt2, iphase
@@ -117,12 +116,12 @@ garev     =       0                                         ; set garev to 0 to 
 
 
 instr 2
-kcutoff = 6000
-kresonance = .5
+kcutoff = 9000
+kresonance = 0
 
 a1 moogladder garev, kcutoff, kresonance
 
-aL, aR reverbsc a1, a1, .72, 5000
+aL, aR reverbsc a1, a1, .5, 10000
 
 outs aL, aR
 
@@ -165,8 +164,8 @@ f41 0 4097 -9 4 0.136 0 5 0.026 0
 ;reverb--------------------------------------------------------------------------------
 ;p1    p2      p3     p4        p5        p6
 ;      start   dur    revtime   %reverb   gain
-i194   0     360000    1.1       .1        1.0
-;i194 0 360000
+i194   0     360000    1       .05        1.0
+;i2 0 360000
 end
 </CsScore>
 </CsoundSynthesizer>

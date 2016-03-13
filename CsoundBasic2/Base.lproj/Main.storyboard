@@ -451,17 +451,35 @@
                                     <constraint firstAttribute="trailing" secondItem="lUm-JJ-1b5" secondAttribute="trailing" constant="10" id="AIa-FY-uHs"/>
                                 </constraints>
                             </stackView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eNs-w0-WN1">
+                                <rect key="frame" x="101" y="443" width="118" height="31"/>
+                                <connections>
+                                    <action selector="vibratoCtl:" destination="BYZ-38-t0r" eventType="valueChanged" id="5Cn-XR-bQj"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OJr-Gp-Pkb">
+                                <rect key="frame" x="101" y="390" width="118" height="31"/>
+                                <connections>
+                                    <action selector="volumeCtl:" destination="BYZ-38-t0r" eventType="valueChanged" id="aQ7-39-1PH"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qf8-Bz-gxd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="16b-s9-GbB"/>
                             <constraint firstItem="lUm-JJ-1b5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3Lh-3w-st9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kjc-y6-aQZ" secondAttribute="trailing" constant="-6" id="GHL-Yx-Xmy"/>
+                            <constraint firstItem="eNs-w0-WN1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KzV-so-Z3x"/>
+                            <constraint firstItem="eNs-w0-WN1" firstAttribute="top" secondItem="OJr-Gp-Pkb" secondAttribute="bottom" constant="23" id="Q49-4Y-P8C"/>
                             <constraint firstItem="kjc-y6-aQZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="6" id="Xt8-gw-0RY"/>
                             <constraint firstItem="U35-Xh-V8p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="asS-o1-0Pv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kjc-y6-aQZ" secondAttribute="bottom" constant="200" id="k6j-qS-iDN"/>
                             <constraint firstItem="tkl-2w-Oyt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mhO-ik-IZT"/>
                             <constraint firstItem="hyC-Zv-jOP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ocl-np-Mar"/>
+                            <constraint firstItem="eNs-w0-WN1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="87" id="qOX-PN-EPm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eNs-w0-WN1" secondAttribute="bottom" constant="95" id="tia-io-PDO"/>
+                            <constraint firstItem="eNs-w0-WN1" firstAttribute="trailing" secondItem="OJr-Gp-Pkb" secondAttribute="trailing" id="ukA-HX-ZkZ"/>
+                            <constraint firstItem="eNs-w0-WN1" firstAttribute="leading" secondItem="OJr-Gp-Pkb" secondAttribute="leading" id="z3P-UY-l8o"/>
                         </constraints>
                     </view>
                     <connections>
