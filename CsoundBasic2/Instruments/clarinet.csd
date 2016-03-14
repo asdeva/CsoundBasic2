@@ -44,12 +44,12 @@ kamp  chnget S_vol
 kvibr chnget S_vib
 
 
-kvibd     =       abs(kvibr*kfreq/100.0)                    ; vibrato depth relative to fund. freq
+kvibd     =       abs(kvibr*kfreq/100.0)                   ; vibrato depth relative to fund. freq
 iatt      =       0.1                                      ; attack time
 idec      =       0.1                                      ; decay time
-ibrite    tablei  7, 2                                      ; lowpass filter cutoff frequency
+ibrite    tablei  7, 2                                     ; lowpass filter cutoff frequency
 itablno   table   5, 3                                     ; select first wavetable number for this
-                                                            ; instrument (in table 3)
+                                                           ; instrument (in table 3)
 
 ivibr1    =       4.5 + giseed
 giseed    =       frac(giseed*105.947)

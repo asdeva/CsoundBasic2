@@ -137,9 +137,6 @@ endin
 
 </CsInstruments>
 <CsScore>
-; oboe.sco (in the woodwind subdirectory on the CD-ROM)
-; Stravinsky - The Rite of Spring
-; oboe solo near beginning
 
 f1 0 8193 -9 1 1.000 0                                                        ; sine wave
 f2 0 16 -2 40 40 80 160 320 640 1280 2560 5120 10240 10240                    ; filter cutoff table

@@ -17,9 +17,9 @@ class ViewController: UIViewController
     
     var instrument: BasicInstrument!
     
-    let baseNote:  Float = 110.0
+    let baseNote:  Float = 50.0
     
-    var legato = true
+    var legato = false
     
     var volume: Float = 0.3
     
@@ -46,9 +46,9 @@ class ViewController: UIViewController
     
     var i = 0
     
-    var offset = 12
+    var offset = 0
     
-    var playBack = false
+    var playBack = true
     
     
     override func viewDidAppear(animated: Bool) {
@@ -56,6 +56,7 @@ class ViewController: UIViewController
         csound = CsoundObj()
         
         //instrument = BasicInstrument(csd: "flute", csound: csound)
+        //instrument = BasicInstrument(csd: "piccolo", csound: csound)
         //instrument = BasicInstrument(csd: "oboe", csound: csound)
         //instrument = BasicInstrument(csd: "csscript", csound: csound)
         //instrument = BasicInstrument(csd: "sax", csound: csound)
@@ -63,7 +64,10 @@ class ViewController: UIViewController
         //instrument = BasicInstrument(csd: "trumpet", csound: csound)
         //instrument = BasicInstrument(csd: "trombone", csound: csound)
         //instrument = BasicInstrument(csd: "tuba", csound: csound)
-        instrument = BasicInstrument(csd: "clarinet", csound: csound)
+        //instrument = BasicInstrument(csd: "clarinet", csound: csound)
+        //instrument = BasicInstrument(csd: "enghorn", csound: csound)
+        //instrument = BasicInstrument(csd: "bassoon", csound: csound)
+        instrument = BasicInstrument(csd: "bassclar", csound: csound)
         assignNoteToButton()
         view.multipleTouchEnabled = true
     }
