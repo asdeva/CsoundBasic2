@@ -67,7 +67,8 @@ class ViewController: UIViewController
         //instrument = BasicInstrument(csd: "clarinet", csound: csound)
         //instrument = BasicInstrument(csd: "enghorn", csound: csound)
         //instrument = BasicInstrument(csd: "bassoon", csound: csound)
-        instrument = BasicInstrument(csd: "bassclar", csound: csound)
+        instrument = BasicInstrument(csd: "cbassoon", csound: csound)
+        //instrument = BasicInstrument(csd: "bassclar", csound: csound)
         assignNoteToButton()
         view.multipleTouchEnabled = true
     }

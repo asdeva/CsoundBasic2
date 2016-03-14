@@ -45,6 +45,7 @@
 		A89EFAEA1C969676000B9B15 /* piccolo.csd in Resources */ = {isa = PBXBuildFile; fileRef = A89EFAE91C969676000B9B15 /* piccolo.csd */; };
 		A89EFAEC1C96996A000B9B15 /* bassoon.csd in Resources */ = {isa = PBXBuildFile; fileRef = A89EFAEB1C96996A000B9B15 /* bassoon.csd */; };
 		A89EFAEE1C969AD3000B9B15 /* bassclar.csd in Resources */ = {isa = PBXBuildFile; fileRef = A89EFAED1C969AD3000B9B15 /* bassclar.csd */; };
+		A89EFAF01C969C7F000B9B15 /* cbassoon.csd in Resources */ = {isa = PBXBuildFile; fileRef = A89EFAEF1C969C7F000B9B15 /* cbassoon.csd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +152,7 @@
 		A89EFAE91C969676000B9B15 /* piccolo.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = piccolo.csd; sourceTree = "<group>"; };
 		A89EFAEB1C96996A000B9B15 /* bassoon.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bassoon.csd; sourceTree = "<group>"; };
 		A89EFAED1C969AD3000B9B15 /* bassclar.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bassclar.csd; sourceTree = "<group>"; };
+		A89EFAEF1C969C7F000B9B15 /* cbassoon.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cbassoon.csd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 				A89EFAE31C968A6A000B9B15 /* clarinet.csd */,
 				A89EFAE51C9691BE000B9B15 /* enghorn.csd */,
 				A89EFAEB1C96996A000B9B15 /* bassoon.csd */,
+				A89EFAEF1C969C7F000B9B15 /* cbassoon.csd */,
 				A89EFAED1C969AD3000B9B15 /* bassclar.csd */,
 			);
 			path = Instruments;
@@ -451,6 +454,7 @@
 				A8313C9D1C39D7A50093A438 /* LaunchScreen.storyboard in Resources */,
 				A89EFADC1C967C2B000B9B15 /* horn.csd in Resources */,
 				A89EFADE1C9680E8000B9B15 /* trumpet.csd in Resources */,
+				A89EFAF01C969C7F000B9B15 /* cbassoon.csd in Resources */,
 				A89EFAEC1C96996A000B9B15 /* bassoon.csd in Resources */,
 				A89EFAE21C96867C000B9B15 /* tuba.csd in Resources */,
 				A8026D8C1C9501EE00BC2337 /* oboe.csd in Resources */,
