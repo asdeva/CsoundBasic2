@@ -35,17 +35,20 @@ class ViewController: UIViewController
     
     var numNotesOn = 0
     
-    let melody = [5,5,8,5,5,8,5,8,13,12,10,10,8,3,5,6,3,3,5,6,3,6,12,10,8,12,13,
-    1,1,13,10,6,8,5,1,6,8,10,8,1,1,13,10,6,8,5,1,6,8,6,5,3,1]
+    //let melody = [5,5,8,5,5,8,5,8,13,12,10,10,8,3,5,6,3,3,5,6,3,6,12,10,8,12,13,
+    //1,1,13,10,6,8,5,1,6,8,10,8,1,1,13,10,6,8,5,1,6,8,6,5,3,1]
     
     //let melody = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
+    
+    let melody = [5,10,5,10,13,10,13,17,13,18,17,13,10,12,9,13,12,9,5,10,5,13,12,
+        5,10,5,10,13,10,13,17,13,18,17,13,10,12,9,13,12,9,5,10,5,9,10]
   
     
     var i = 0
     
     var offset = 12
     
-    var playBack = true
+    var playBack = false
     
     
     override func viewDidAppear(animated: Bool) {
@@ -53,8 +56,14 @@ class ViewController: UIViewController
         csound = CsoundObj()
         
         //instrument = BasicInstrument(csd: "flute", csound: csound)
-        instrument = BasicInstrument(csd: "oboe", csound: csound)
+        //instrument = BasicInstrument(csd: "oboe", csound: csound)
         //instrument = BasicInstrument(csd: "csscript", csound: csound)
+        //instrument = BasicInstrument(csd: "sax", csound: csound)
+        //instrument = BasicInstrument(csd: "horn", csound: csound)
+        //instrument = BasicInstrument(csd: "trumpet", csound: csound)
+        //instrument = BasicInstrument(csd: "trombone", csound: csound)
+        //instrument = BasicInstrument(csd: "tuba", csound: csound)
+        instrument = BasicInstrument(csd: "clarinet", csound: csound)
         assignNoteToButton()
         view.multipleTouchEnabled = true
     }

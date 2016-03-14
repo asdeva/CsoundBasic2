@@ -34,6 +34,12 @@
 		A8313D1A1C39E2990093A438 /* csscript.csd in Resources */ = {isa = PBXBuildFile; fileRef = A8313D191C39E2990093A438 /* csscript.csd */; };
 		A89EFAD61C9527A1000B9B15 /* MovingAverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89EFAD51C9527A1000B9B15 /* MovingAverage.swift */; };
 		A89EFAD81C953271000B9B15 /* Interpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89EFAD71C953271000B9B15 /* Interpolator.swift */; };
+		A89EFADA1C9679CF000B9B15 /* sax.csd in Resources */ = {isa = PBXBuildFile; fileRef = A89EFAD91C9679CF000B9B15 /* sax.csd */; };
+		A89EFADC1C967C2B000B9B15 /* horn.csd in Resources */ = {isa = PBXBuildFile; fileRef = A89EFADB1C967C2B000B9B15 /* horn.csd */; };
+		A89EFADE1C9680E8000B9B15 /* trumpet.csd in Resources */ = {isa = PBXBuildFile; fileRef = A89EFADD1C9680E8000B9B15 /* trumpet.csd */; };
+		A89EFAE01C96851B000B9B15 /* trombone.csd in Resources */ = {isa = PBXBuildFile; fileRef = A89EFADF1C96851B000B9B15 /* trombone.csd */; };
+		A89EFAE21C96867C000B9B15 /* tuba.csd in Resources */ = {isa = PBXBuildFile; fileRef = A89EFAE11C96867C000B9B15 /* tuba.csd */; };
+		A89EFAE41C968A6A000B9B15 /* clarinet.csd in Resources */ = {isa = PBXBuildFile; fileRef = A89EFAE31C968A6A000B9B15 /* clarinet.csd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +135,12 @@
 		A8313D191C39E2990093A438 /* csscript.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = csscript.csd; sourceTree = "<group>"; };
 		A89EFAD51C9527A1000B9B15 /* MovingAverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingAverage.swift; sourceTree = "<group>"; };
 		A89EFAD71C953271000B9B15 /* Interpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolator.swift; sourceTree = "<group>"; };
+		A89EFAD91C9679CF000B9B15 /* sax.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sax.csd; sourceTree = "<group>"; };
+		A89EFADB1C967C2B000B9B15 /* horn.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = horn.csd; sourceTree = "<group>"; };
+		A89EFADD1C9680E8000B9B15 /* trumpet.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trumpet.csd; sourceTree = "<group>"; };
+		A89EFADF1C96851B000B9B15 /* trombone.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trombone.csd; sourceTree = "<group>"; };
+		A89EFAE11C96867C000B9B15 /* tuba.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tuba.csd; sourceTree = "<group>"; };
+		A89EFAE31C968A6A000B9B15 /* clarinet.csd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = clarinet.csd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +177,12 @@
 			children = (
 				A8026D8D1C95029A00BC2337 /* flute.csd */,
 				A8026D8B1C9501EE00BC2337 /* oboe.csd */,
+				A89EFAD91C9679CF000B9B15 /* sax.csd */,
+				A89EFADB1C967C2B000B9B15 /* horn.csd */,
+				A89EFADD1C9680E8000B9B15 /* trumpet.csd */,
+				A89EFADF1C96851B000B9B15 /* trombone.csd */,
+				A89EFAE11C96867C000B9B15 /* tuba.csd */,
+				A89EFAE31C968A6A000B9B15 /* clarinet.csd */,
 			);
 			path = Instruments;
 			sourceTree = "<group>";
@@ -415,12 +433,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8313C9D1C39D7A50093A438 /* LaunchScreen.storyboard in Resources */,
+				A89EFADC1C967C2B000B9B15 /* horn.csd in Resources */,
+				A89EFADE1C9680E8000B9B15 /* trumpet.csd in Resources */,
+				A89EFAE21C96867C000B9B15 /* tuba.csd in Resources */,
 				A8026D8C1C9501EE00BC2337 /* oboe.csd in Resources */,
 				A8313CE91C39D8B00093A438 /* orcandsco.csd in Resources */,
 				A8026D8E1C95029A00BC2337 /* flute.csd in Resources */,
 				A8313C9A1C39D7A50093A438 /* Assets.xcassets in Resources */,
 				A8313D1A1C39E2990093A438 /* csscript.csd in Resources */,
+				A89EFADA1C9679CF000B9B15 /* sax.csd in Resources */,
 				A8313C981C39D7A50093A438 /* Main.storyboard in Resources */,
+				A89EFAE01C96851B000B9B15 /* trombone.csd in Resources */,
+				A89EFAE41C968A6A000B9B15 /* clarinet.csd in Resources */,
 				A8313CEF1C39D8B00093A438 /* run-script.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

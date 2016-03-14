@@ -46,9 +46,9 @@ kvibr chnget S_vib
 
 kvibd     =       abs(kvibr*kfreq/100.0)                    ; vibrato depth relative to fund. freq
 iatt      =       0.09                                      ; attack time
-idec      =       0.09                                       ; decay time
+idec      =       0.09                                      ; decay time
 ibrite    tablei  9, 2                                      ; lowpass filter cutoff frequency
-itablno   table   9, 3                                      ; select first wavetable number for this
+itablno   table   9, 3                                     ; select first wavetable number for this
                                                             ; instrument (in table 3)
 
 ivibr1    =       4.5 + giseed
@@ -167,7 +167,6 @@ f148 0 4097 -9 2 0.041 0 3 0.158 0
 f149 0 4097 -9 4 0.227 0 5 0.072 0
 f150 0 4097 -9 2 0.168 0 3 0.144 0
 f151 0 4097 -9 4 0.096 0
-
 
 ;reverb--------------------------------------------------------------------------------
 ;p1    p2      p3     p4        p5        p6
